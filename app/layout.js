@@ -10,19 +10,22 @@ const vazir = Vazirmatn({
   subsets: ["arabic", "latin"],
   weight: ["300", "400", "500", "700"],
 });
+
 export const metadata = {
   title: "Deka Team",
   description: "A site to introduce the Deka team",
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={vazir.className}>{children}</body>
-      <AppRouterCacheProvider>
-        <ThemeProvider theme={theme}>
-          <ContainerContent>{children}</ContainerContent>
-        </ThemeProvider>
-      </AppRouterCacheProvider>
+      <body className={vazir.className}>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <ContainerContent>{children}</ContainerContent>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
