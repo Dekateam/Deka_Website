@@ -1,12 +1,10 @@
+// src/theme.js
 "use client";
-import { Vazirmatn } from "next/font/google";
 import { createTheme } from "@mui/material/styles";
-
-const vazir = Vazirmatn({ subsets: ["arabic", "latin"], display: "swap" });
 
 const theme = createTheme({
   typography: {
-    fontFamily: vazir.style.fontFamily,
+    fontFamily: "Vazir, sans-serif",
   },
 });
 
