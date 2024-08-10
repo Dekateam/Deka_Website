@@ -9,6 +9,8 @@ export default function Home() {
       </Typography>
       <Typography fontSize={"2rem"}>
         سلام جوجو
+      </Typography><Typography fontSize={"2rem"}>
+        سلام 
       </Typography>
 
     </>
