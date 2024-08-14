@@ -1,0 +1,92 @@
+/* components/Header.module.css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: yellow;
+  padding: 20px;
+}
+
+.circles {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red; /* رنگ رو به قرمز تغییر بده تا بهتر دیده بشه */
+  top: 0;
+  left: 0;
+}
+
+.circle:nth-child(2) {
+  width: 80%;
+  height: 80%;
+  background-color: #02a6d6;
+  top: 10%;
+  left: 10%;
+  animation: spin 12s linear infinite reverse;
+}
+
+.circle:nth-child(3) {
+  width: 60%;
+  height: 60%;
+  background-color: #007f99;
+  top: 20%;
+  left: 20%;
+  animation: spin 14s linear infinite;
+}
+
+.circle:nth-child(4) {
+  width: 40%;
+  height: 40%;
+  background-color: #00576e;
+  top: 30%;
+  left: 30%;
+  animation: spin 16s linear infinite reverse;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00e2c5;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+.logo img {
+  width: 100px;
+}

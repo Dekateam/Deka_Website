@@ -3,7 +3,7 @@
 @font-face {
   font-family: "Vazir";
   src: url("/fonts/Vazir-Medium.woff") format("woff2");
-  font-weight: 500;
+  /* font-weight: 100; */
   font-style: normal;
   font-style: normal;
   font-display: swap;
@@ -20,17 +20,18 @@
 
 body {
   font-family: "Vazir", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding: 0;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Vazir-bold" !important;
-}
+} */
 
 .sky_blue {
   background-color: #08bbb5;
@@ -52,7 +53,7 @@ h6 {
   color: #011a30;
 }
 .button_color {
-  background-color: #21ff2a;
+  background-color: #5cff61;
 }
 .close_color {
   background-color: #ff0000;

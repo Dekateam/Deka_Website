@@ -8,7 +8,7 @@ import { ThemeProvider } from "@mui/material";
 
 const vazir = Vazirmatn({
   subsets: ["arabic", "latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["100", "200", "300", "400", "500", "700"],
 });
 
 export const metadata = {
@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={vazir.className}>
+      <body className="main_color">
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <ContainerContent>{children}</ContainerContent>
