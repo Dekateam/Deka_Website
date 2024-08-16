@@ -10,6 +10,7 @@ import { styled } from "@mui/material/styles";
 import Image from "next/image";
 import DownArrows from "../src/components/geometricShapes/DownArrows";
 import MemoryCard from "../src/components/geometricShapes/MemoryCard";
+import Square from "../src/components/geometricShapes/square";
 
 const BootstrapButton = styled(Button)({
   backgroundColor: "#21FF2A",
@@ -29,41 +30,56 @@ const BootstrapButton = styled(Button)({
   },
 });
 
+const features = [
+  {
+    title: "طرح های مدرن",
+    url: "./icons/america.png",
+  },
+  {
+    title: "ایده های جذاب",
+    url: "./icons/innovation.png",
+  },
+  {
+    title: "راهکارهای خلاقانه",
+    url: "./icons/pen.png",
+  },
+];
+
 const Digital_business_needs = [
   {
     title: "دیجیتال مارکتینگ",
     desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده",
-    src: "./icons/email.jpg",
+    src: "./icons/barchart.png",
     isRight: true,
   },
   {
     title: "دیجیتال مارکتینگ",
     desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده",
-    src: "./icons/email.jpg",
+    src: "./icons/paintpalette.png",
     isRight: false,
   },
   {
     title: "دیجیتال مارکتینگ",
     desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده",
-    src: "./icons/email.jpg",
+    src: "./icons/paintbucket.png",
     isRight: true,
   },
   {
     title: "دیجیتال مارکتینگ",
     desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده",
-    src: "./icons/email.jpg",
+    src: "./icons/search.png",
     isRight: false,
   },
   {
     title: "دیجیتال مارکتینگ",
     desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده",
-    src: "./icons/email.jpg",
+    src: "./icons/slice.png",
     isRight: true,
   },
   {
     title: "دیجیتال مارکتینگ",
     desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده",
-    src: "./icons/email.jpg",
+    src: "./icons/tools.png",
     isRight: false,
   },
 ];
@@ -192,11 +208,13 @@ const Home = () => {
             variant="h5"
             textAlign={"center"}
             marginTop={"12px"}
-            marginBottom={"40px"}
+            marginX={"7px"}
           >
             دکاتیم رمزی برای دستیابی به رتبه های برتر
           </Typography>
-          <DownArrows />
+          <Box marginY={"50px"}>
+            <DownArrows />
+          </Box>
         </Grid>
 
         <Grid
@@ -221,7 +239,34 @@ const Home = () => {
         backgroundColor={"white"}
         display={"flex"}
         justifyContent={"center"}
+        sx={{ paddingBottom: { sm: "180px", md: "170px" } }}
       >
+        {features.map((feature, index) => (
+          <Grid
+            key={index}
+            xs={12}
+            sm={4}
+            display={"flex"}
+            justifyContent={"center"}
+          >
+            <Square item={feature} />
+          </Grid>
+        ))}
+        <Grid xs={12} sm={6} md={4}>
+          <Box
+            width={"100%"}
+            height={"50px"}
+            backgroundColor={"#011a30"}
+            borderRadius={"10px"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+          >
+            <Typography textAlign={"center"} variant="h6" color={"white"}>
+              نیازهای شما برای کسب و کار دیجیتال
+            </Typography>
+          </Box>
+        </Grid>
         <Grid xs={12} marginTop={"20px"}>
           {Digital_business_needs.map((need, index) => (
             <MemoryCard item={need} key={index} />
