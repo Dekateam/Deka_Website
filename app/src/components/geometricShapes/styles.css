@@ -1,10 +1,128 @@
+/* Down Arroe style */
+
 .arrow-style {
   border: solid;
   border-width: 0 2px 2px 0;
-  /* height: 45px 75px; */
   display: inline-block;
   padding: 20px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   margin-bottom: -33px;
+}
+
+/* Memory card style */
+.right-memory-style {
+  width: 200px;
+  height: 160px;
+  background-color: #011a30;
+  border-radius: 17px;
+  position: relative;
+}
+
+.right-memory-style::before {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: white;
+  border-radius: 0 0 12px 0;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+.right-postion-style {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 110px;
+  right: -6px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-postion-style::after {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: #08bbb5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px; /* سایز آیکون */
+  color: black; /* رنگ آیکون */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"%3E%3Cline x1="0" y1="12" x2="22" y2="12"%3E%3C/line%3E%3Cpolyline points="16 6 22 12 16 18"%3E%3C/polyline%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* left memory style */
+.left-memory-style {
+  width: 200px;
+  height: 160px;
+  background-color: #011a30;
+  border-radius: 17px;
+  position: relative;
+  /* margin-top: 200px; */
+}
+
+.left-memory-style::before {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: white;
+  border-radius: 0 0 0 12px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+.left-postion-style {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 110px;
+  left: -6px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-postion-style::after {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: #08bbb5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px; /* سایز آیکون */
+  color: black; /* رنگ آیکون */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"%3E%3Cline x1="0" y1="12" x2="22" y2="12"%3E%3C/line%3E%3Cpolyline points="16 6 22 12 16 18"%3E%3C/polyline%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .right-memory-style .desc-text,
+.left-memory-style .desc-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+.desc-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3; /* Adjust to fit your needs */
+  line-height: 1.5; /* Adjust based on your font size */
+  max-height: 4.5em; /* 1.5 * 2 lines = 3em */
+  height: 100%; /* Ensure it takes full height of the container */
 }
