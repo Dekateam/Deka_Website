@@ -6,9 +6,9 @@ import { Box, Typography } from "@mui/material";
 const Square = ({item}) =>{
 return(
     <Box width={"200px"} height={"170px"} borderRadius={"20px"}
-        margin={"30px"} display={"flex"} flexDirection={"column"}
+        marginY={"30px"} marginX={"auto"} display={"flex"} flexDirection={"column"}
         alignItems={"center"} justifyContent={"center"}
-        sx={{backgroundColor:"#08bbb5"}}>
+        sx={{backgroundColor:"var(--sky_blue)"}}>
         <Typography color={"white"} variant="h6" textAlign={"center"} marginBottom={"10px"}>
             {item.title}
         </Typography>

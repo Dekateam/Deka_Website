@@ -8,9 +8,8 @@ const DownArrows = () => {
   return (
     <div className="">
       {colors.map((color, index) => (
-        <Box display={"flex"}>
+        <Box key={index} display={"flex"}>
           <div
-            key={index}
             className="arrow-style"
             style={{ borderColor: color }}
           />
