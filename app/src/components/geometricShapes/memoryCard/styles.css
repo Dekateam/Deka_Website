@@ -1,0 +1,113 @@
+.right-memory-style {
+  width: 200px;
+  height: 160px;
+  background-color: #011a30;
+  border-radius: 17px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.right-memory-style::before {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: white;
+  border-radius: 0 0 12px 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.right-postion-style {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 110px;
+  right: -6px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.right-postion-style::after {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: #08bbb5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/icons/right-arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* left memory style */
+.left-memory-style {
+  width: 200px;
+  height: 160px;
+  background-color: #011a30;
+  border-radius: 17px;
+  position: relative;
+}
+
+.left-memory-style::before {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: white;
+  border-radius: 0 0 0 12px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+.left-postion-style {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 110px;
+  left: -6px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-postion-style::after {
+  content: "";
+  width: 70px;
+  height: 25px;
+  background-color: #08bbb5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/icons/left-arrow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .right-memory-style .desc-text,
+  .left-memory-style .desc-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
+
+.desc-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3; /* Adjust to fit your needs */
+  line-height: 1.5; /* Adjust based on your font size */
+  max-height: 4.5em; /* 1.5 * 2 lines = 3em */
+  height: 100%; /* Ensure it takes full height of the container */
+}

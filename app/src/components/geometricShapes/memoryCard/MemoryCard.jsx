@@ -5,7 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Box, Typography } from "@mui/material";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import CloseIcon from '@mui/icons-material/Close';
-import "../../../globals.css";
+import "../../../../globals.css";
 
 
 

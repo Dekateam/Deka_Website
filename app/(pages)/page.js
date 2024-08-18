@@ -9,7 +9,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { styled } from "@mui/material/styles";
 import Image from "next/image";
 import DownArrows from "../src/components/geometricShapes/DownArrows";
-import MemoryCard from "../src/components/geometricShapes/MemoryCard";
+import MemoryCard from "../src/components/geometricShapes/memoryCard/MemoryCard";
 import Square from "../src/components/geometricShapes/square";
 import ButtonComponent from "../src/components/geometricShapes/CustomButton";
 
@@ -23,6 +23,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import MemoryMdDown from "../src/components/geometricShapes/memoryCard/MdDown";
 
 const RegistrationButton = styled(Button)({
   backgroundColor: "var(--light_green)",
@@ -289,7 +290,7 @@ const Home = () => {
 
         <Grid xs={12} sm={6} md={4} display={"flex"} justifyContent={"center"}>
           <Box
-            width={{ xs: "80%", md: "95%" }}
+            width={{ xs: "80%", md: "95+%" }}
             height={{ xs: "50px", md: "70px" }}
             backgroundColor={"#011a30"}
             borderRadius={"15px"}
@@ -308,9 +309,20 @@ const Home = () => {
           </Box>
         </Grid>
 
-        <Grid xs={12} marginTop={"20px"}>
+        <Grid xs={12} marginTop={"20px"} display={{ xs: "none", sm: "block" }}>
           {Digital_business_needs.map((need, index) => (
             <MemoryCard item={need} key={index} />
+          ))}
+        </Grid>
+        <Grid
+          xs={12}
+          marginTop={"20px"}
+          display={{ xs: "flex", sm: "none" }}
+          flexDirection={"column"}
+          alignItems={"center"}
+        >
+          {Digital_business_needs.map((need, index) => (
+            <MemoryMdDown item={need} key={index} />
           ))}
         </Grid>
       </Grid>
