@@ -90,3 +90,12 @@
 .logo img {
   width: 100px;
 }
+
+.text-center {
+  text-align: right;
+}
+
+.none-decoration {
+  text-decoration: none;
+  color: var(--main_color);
+}

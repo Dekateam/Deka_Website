@@ -24,6 +24,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import MemoryMdDown from "../src/components/geometricShapes/memoryCard/MdDown";
+import BrandsSwipper from "../src/components/brands/BrandsSwipper";
 
 const RegistrationButton = styled(Button)({
   backgroundColor: "var(--light_green)",
@@ -324,6 +325,18 @@ const Home = () => {
           {Digital_business_needs.map((need, index) => (
             <MemoryMdDown item={need} key={index} />
           ))}
+        </Grid>
+      </Grid>
+
+      {/* brand section */}
+      <Grid
+        container
+        display={"flex"}
+        justifyContent={"center"}
+        backgroundColor={"var(--main_color)"}
+      >
+        <Grid xs={12} md={11}>
+          <BrandsSwipper />
         </Grid>
       </Grid>
     </Box>
