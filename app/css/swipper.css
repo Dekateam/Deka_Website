@@ -1,0 +1,13 @@
+.right-arrow-navy {
+  .swiper-button-prev:after {
+    color: var(--main_color);
+    font-size: 20px;
+  }
+}
+.left-arrow-navy {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    color: var(--main_color);
+    font-size: 20px;
+  }
+}

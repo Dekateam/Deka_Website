@@ -25,6 +25,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import MemoryMdDown from "../src/components/geometricShapes/memoryCard/MdDown";
 import BrandsSwipper from "../src/components/brands/BrandsSwipper";
+import Order from "../src/components/steps/Order";
 
 const RegistrationButton = styled(Button)({
   backgroundColor: "var(--light_green)",
@@ -272,6 +273,7 @@ const Home = () => {
           justifyContent={"center"}
         >
           <Swiper
+            className="right-arrow-navy left-arrow-navy"
             cssMode={true}
             navigation={true}
             pagination={true}
@@ -337,6 +339,18 @@ const Home = () => {
       >
         <Grid xs={12} md={11}>
           <BrandsSwipper />
+        </Grid>
+      </Grid>
+
+      {/* steps ordering section */}
+      <Grid
+        container
+        display={"flex"}
+        justifyContent={"center"}
+        backgroundColor={"var(--main_color)"}
+      >
+        <Grid xs={11} marginY={"20px"}>
+          <Order />
         </Grid>
       </Grid>
     </Box>

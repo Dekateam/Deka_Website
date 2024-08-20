@@ -6,6 +6,7 @@ import theme from "./src/theme";
 import ContainerContent from "./src/components/ContainerContent";
 import { ThemeProvider } from "@mui/material";
 import Header from "./src/components/header/Header";
+import Footer from "./src/components/footer/Footer";
 
 const vazir = Vazirmatn({
   subsets: ["arabic", "latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
             <ContainerContent>
               <Header />
               {children}
+              <Footer />
             </ContainerContent>
           </ThemeProvider>
         </AppRouterCacheProvider>
