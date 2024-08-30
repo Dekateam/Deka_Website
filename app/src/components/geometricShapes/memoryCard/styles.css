@@ -111,3 +111,14 @@
   max-height: 4.5em; /* 1.5 * 2 lines = 3em */
   height: 100%; /* Ensure it takes full height of the container */
 }
+
+.full-desc-box {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.full-desc-box.expanded {
+  opacity: 1;
+  transform: translateY(0);
+}

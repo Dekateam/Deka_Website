@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./global.css";
 import "./css/colors.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { Vazirmatn } from "next/font/google";

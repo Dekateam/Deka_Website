@@ -1,6 +1,6 @@
 "use client";
 import { Typography, Box } from "@mui/material";
-import "../../globals.css";
+import "../../global.css";
 
 const Home = () => {
   return (

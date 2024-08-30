@@ -1,0 +1,83 @@
+/* Adding Vazir fonts */
+
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/Vazir-Medium.woff") format("woff2");
+  /* font-weight: 100; */
+  font-style: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazir-bold";
+  src: url("/fonts/Vazir-Bold.woff") format("woff2"),
+    url("/fonts/Vazir-Bold.woff2") format("woff");
+  font-weight: 800;
+  font-style: bold;
+  font-display: swap;
+}
+
+body {
+  font-family: "Vazir", sans-serif;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+.box-shadow {
+  box-shadow: 2px 2px 20px 9px #e0e0e0;
+}
+
+.right-shadow {
+  box-shadow: 20px 25px 30px 1px #e0e0e0;
+}
+.left-shadow {
+  box-shadow: -20px 25px 30px 1px #e0e0e0;
+}
+
+.arrow-down {
+  border: solid;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 13px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  top: 97%;
+  color: var(--sky_blue);
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Vazir-bold" !important;
+} */
+
+.sky_blue {
+  background-color: #08bbb5;
+}
+.sky_blue_1 {
+  background-color: #07a9a7;
+}
+.sky_blue_2 {
+  background-color: #068e90;
+}
+.sky_blue_3 {
+  background-color: #067a80;
+}
+.sky_blue_4 {
+  background-color: #044e5b;
+}
+.main_color {
+  background-color: #011a30;
+  color: #011a30;
+}
+.button_color {
+  background-color: #5cff61;
+}
+.close_color {
+  background-color: #ff0000;
+}
