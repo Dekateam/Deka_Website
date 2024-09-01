@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
+import React from "react";
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 const CustomButton = styled(Button)(({ theme, buttoncolor }) => ({
   backgroundColor: buttoncolor,
@@ -23,9 +23,8 @@ const CustomButton = styled(Button)(({ theme, buttoncolor }) => ({
 }));
 
 const ButtonComponent = ({ color, title, action }) => {
-
   const handleClick = () => {
-    if (typeof action === 'function') {
+    if (typeof action === "function") {
       action();
     }
   };
@@ -38,8 +37,8 @@ const ButtonComponent = ({ color, title, action }) => {
     >
       <CustomButton
         buttoncolor={color} // Prop name changed to lowercase
-        variant="contained" 
-        disableRipple 
+        variant="contained"
+        disableRipple
         onClick={handleClick}
       >
         {title}
