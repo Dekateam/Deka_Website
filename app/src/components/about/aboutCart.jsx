@@ -15,20 +15,20 @@ export default function TeamAbout(props) {
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
+            height="100%"
             image={props.img}
             alt="Team Images"
-            style={{ padding: "10px" }}
+            // style={{ padding: "10px" }}
             className="sky_blue"
           />
-          <CardContent className="sky_blue">
+          {/* <CardContent className="sky_blue">
             <Typography gutterBottom variant="h5" component="div">
               {props.title}
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
               {props.Details}
             </Typography>
-          </CardContent>
+          </CardContent> */}
         </CardActionArea>
       </Card>
     </>
