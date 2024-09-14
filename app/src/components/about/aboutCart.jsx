@@ -9,8 +9,8 @@ export default function TeamAbout(props) {
   return (
     <>
       <Card
-        sx={{ maxWidth: 250, maxHeight: 300, borderRadius: "10px" }}
-        className="sky_blue"
+        sx={{ maxWidth: 250, maxHeight: 500, borderRadius: "10px" , paddingBottom:{xs:"30px",md:"0px"}, marginBottom:"20px"}}
+        // className="sky_blue"
       >
         <CardActionArea>
           <CardMedia
@@ -18,17 +18,17 @@ export default function TeamAbout(props) {
             height="100%"
             image={props.img}
             alt="Team Images"
-            // style={{ padding: "10px" }}
-            className="sky_blue"
+            style={{ padding: "10px" }}
+            // className="sky_blue"
           />
-          {/* <CardContent className="sky_blue">
+          <CardContent >
             <Typography gutterBottom variant="h5" component="div">
               {props.title}
             </Typography>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
               {props.Details}
             </Typography>
-          </CardContent> */}
+          </CardContent>
         </CardActionArea>
       </Card>
     </>

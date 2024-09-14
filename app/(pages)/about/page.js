@@ -30,7 +30,14 @@ const TeamView = () => {
         sx={{ padding: "20px 80px", display: { xs: "none", md: "flex" } }}
       >
         {teamView.map((teamAbout) => (
-          <Grid item md={4} xs={12} key={teamAbout.id} sx={{ margin: 0 }}>
+          <Grid
+            item
+            md={4}
+            lg={3}
+            xs={12}
+            key={teamAbout.id}
+            sx={{ margin: 0 }}
+          >
             <TeamAbout {...teamAbout} />
           </Grid>
         ))}
