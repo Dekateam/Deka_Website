@@ -26,7 +26,7 @@ const DrawerAppBar = (props) => {
   const currentPath = pathname;
 
   const drawer = (
-    <Box sx={{ textAlign: "center" }}>
+    <Box sx={{ textAlign: "center"  , backgroundColor:"#011a30"}}>
       <Box marginY={"20px"}>
         <img src="/images/logoDeka.png" width={"100px"} alt="Logo" />
       </Box>

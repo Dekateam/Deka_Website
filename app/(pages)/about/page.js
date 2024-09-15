@@ -18,17 +18,22 @@ import { Pagination } from "swiper/modules";
 import AboutText from "@/app/src/components/about/aboutText";
 
 const TeamView = () => {
-  const [teamView] = useState(TeamData); // Directly use stored team data
+  const [teamView] = useState(TeamData);
 
   return (
     <>
+      {/* کارت ها و متن درباره ما در حالت تبللت به بالا */}
       <Grid
         container
         rowSpacing={2}
         columnSpacing={0}
-        className="main_color"
-        sx={{ padding: "20px 80px", display: { xs: "none", md: "flex" } }}
+        sx={{
+          padding: "20px 80px",
+          display: { xs: "none", md: "flex" },
+          justifyContent: "center",
+        }}
       >
+        <AboutText />
         {teamView.map((teamAbout) => (
           <Grid
             item
@@ -41,23 +46,25 @@ const TeamView = () => {
             <TeamAbout {...teamAbout} />
           </Grid>
         ))}
-        <AboutText />
       </Grid>
+
+      {/* کارت ها و متن درباره ما در حالت تبللت به پایین */}
+
       <Grid
         container
         marginBottom={"30px"}
-        sx={{ display: { padding: "20px 80px", md: "none" } }}
+        sx={{ display: { padding: "20px 10px", md: "none" } }}
       >
+        <AboutText />
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
           {teamView.map((teamAbout) => (
             <SwiperSlide key={teamAbout.id}>
-              <Grid item sx={{ margin: 0 }}>
+              <Grid item sx={{ marginTop: "20px" }}>
                 <TeamAbout {...teamAbout} />
               </Grid>
             </SwiperSlide>
           ))}
         </Swiper>
-        <AboutText />
       </Grid>
     </>
   );

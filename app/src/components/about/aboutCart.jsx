@@ -5,12 +5,19 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 
+//کارت مربوط به صفحه درباره ما
+
 export default function TeamAbout(props) {
   return (
     <>
       <Card
-        sx={{ maxWidth: 250, maxHeight: 500, borderRadius: "10px" , paddingBottom:{xs:"30px",md:"0px"}, marginBottom:"20px"}}
-        // className="sky_blue"
+        sx={{
+          maxWidth: 250,
+          maxHeight: 500,
+          marginBottom: { xs: "30px", md: "0px" },
+          borderRadius: "10px",
+        }}
+        className="main_color"
       >
         <CardActionArea>
           <CardMedia
@@ -19,13 +26,18 @@ export default function TeamAbout(props) {
             image={props.img}
             alt="Team Images"
             style={{ padding: "10px" }}
-            // className="sky_blue"
+            className="main_color"
           />
-          <CardContent >
-            <Typography gutterBottom variant="h5" component="div">
+          <CardContent className="main_color">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              color={"white"}
+            >
               {props.title}
             </Typography>
-            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            <Typography variant="body2" color={"white"}>
               {props.Details}
             </Typography>
           </CardContent>
