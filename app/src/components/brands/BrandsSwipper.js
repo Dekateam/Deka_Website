@@ -10,12 +10,11 @@ import "./styles.css";
 
 export default function BrandsSwipper() {
   const brands = [
-    { url: "./icons/america.png" },
-    { url: "./icons/innovation.png" },
-    { url: "./icons/paintbucket.png" },
-    { url: "./icons/paintpalette.png" },
-    { url: "./icons/pen.png" },
-    { url: "./icons/tools.png" },
+    { url: "./images/companiesLogo/logo1.png" },
+    { url: "./images/companiesLogo/logo2.png" },
+    { url: "./images/companiesLogo/mft.png" },
+    { url: "./images/companiesLogo/saffron.png" },
+    { url: "./images/companiesLogo/shna.png" },
   ];
 
   return (

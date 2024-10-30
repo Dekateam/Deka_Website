@@ -15,7 +15,7 @@ const steps = [
 
 const Order = () => {
   return (
-    <Box marginBottom={"100px"}>
+    <Box >
       <Box marginBottom={"50px"}>
         <Typography
           fontSize={{ xs: "19px", sm: "22px" }}

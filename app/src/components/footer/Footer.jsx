@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <Box>
-      <Box backgroundColor={"var(--main_color)"}>
+      <Box backgroundColor={"var(--main_color)"} paddingTop={"50px"}>
         <Typography
           textAlign={"center"}
           fontSize={{ xs: "17px", sm: "20px" }}
