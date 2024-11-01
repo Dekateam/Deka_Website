@@ -2,7 +2,7 @@
 import "../global.css";
 import "../css/colors.css";
 import "../css/swipper.css";
-import { Button, Typography } from "@mui/material";
+import { Backdrop, Button, Fade, Link, Modal, Typography } from "@mui/material";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -104,8 +104,40 @@ const Digital_business_needs = [
     id: 6,
   },
 ];
+const SocialMedia = [
+  {
+    url: "/icons/linkedin.png",
+    alt: "لینکدین",
+    link: "https://www.linkedin.com/in/your-profile",
+  },
+  {
+    url: "./icons/instagram.png",
+    alt: "اینستاگرام",
+    link: "https://www.instagram.com/your-profile",
+  },
+  {
+    url: "./icons/email.png",
+    alt: "ایمیل",
+    link: "mailto:your-email@example.com",
+  },
+];
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 200,
+  bgcolor: "var(--sky_blue_3)",
+  border: "2px solid #ffff",
+  borderRadius: "10px",
+  boxShadow: 24,
+  p: 4,
+};
 
 const Home = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <Box
       sx={{
@@ -155,8 +187,50 @@ const Home = () => {
               <ButtonComponent
                 color="var(--light_green)"
                 title="ثبت نام کنید"
-                action={() => (window.location.href = "/about")}
+                action={handleOpen}
               />
+              <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                slots={{ backdrop: Backdrop }}
+                slotProps={{
+                  backdrop: {
+                    timeout: 500,
+                  },
+                }}
+              >
+                <Fade in={open}>
+                  <Box sx={style}>
+                    <Box
+                      display={"flex"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                    >
+                      {SocialMedia.map((item, i) => (
+                        <Box margin={"8px"}>
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            key={i}
+                            color="black"
+                          >
+                            <img
+                              src={item.url}
+                              alt={item.alt}
+                              width={"30px"}
+                              height={"30px"}
+                            />
+                          </a>
+                        </Box>
+                      ))}
+                    </Box>
+                  </Box>
+                </Fade>
+              </Modal>
             </Box>
           </Box>
         </Grid>
