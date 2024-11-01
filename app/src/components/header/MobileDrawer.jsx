@@ -33,8 +33,8 @@ export default function MobileDrawer() {
 
   const menuItems = [
     { title: "خانه", url: "/", icon: <HomeIcon /> },
-    { title: "پروژه ها", url: "/projects", icon: <MailIcon /> },
-    { title: "قالب ها", url: "/templates", icon: <InboxIcon /> },
+    // { title: "پروژه ها", url: "/projects", icon: <MailIcon /> },
+    // { title: "قالب ها", url: "/templates", icon: <InboxIcon /> },
     { title: "درباره ما", url: "/about", icon: <Diversity1Icon /> },
   ];
 

@@ -12,11 +12,12 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import Link from "@mui/material/Link";
 import { usePathname } from "next/navigation"; // Import usePathname
+import "../../../css/colors.css";
 
 const navItems = [
   { label: "خانه", path: "/" },
-  { label: "پروژه ها", path: "/projects" },
-  { label: "قالب ها", path: "/templates" },
+  // { label: "پروژه ها", path: "/projects" },
+  // { label: "قالب ها", path: "/templates" },
   { label: "درباره ما", path: "/about" },
 ];
 
@@ -26,7 +27,7 @@ const DrawerAppBar = (props) => {
   const currentPath = pathname;
 
   const drawer = (
-    <Box sx={{ textAlign: "center"  , backgroundColor:"#011a30"}}>
+    <Box sx={{ textAlign: "center", backgroundColor: "#011a30" }}>
       <Box marginY={"20px"}>
         <img src="/images/logoDeka.png" width={"100px"} alt="Logo" />
       </Box>
@@ -34,7 +35,7 @@ const DrawerAppBar = (props) => {
         {navItems.map((item) => (
           <Link href={item.path} key={item.label} underline="none">
             <ListItem disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemButton sx={{ textAlign: "right" }}>
                 <ListItemText primary={item.label} />
               </ListItemButton>
             </ListItem>
@@ -52,18 +53,32 @@ const DrawerAppBar = (props) => {
       <CssBaseline />
       <Grid component="nav" sx={{ boxShadow: "none" }}>
         <Grid
+          container
           sx={{
             margin: "5px",
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: { xs: "none", sm: "block" }, margin: "10px" }}>
+          <Grid
+            xs={8}
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              width: "10%",
+              margin: "10px",
+              justifyContent: "end",
+            }}
+          >
             <img src="/images/logoDeka.png" width={"100px"} alt="Logo" />
-          </Box>
-          <Box
-            sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center" }}
+          </Grid>
+          <Grid
+            xs={4}
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              alignItems: "center",
+            }}
+            justifyContent={"center"}
           >
             {navItems.map((item) => (
               <Link href={item.path} key={item.label}>
@@ -74,7 +89,9 @@ const DrawerAppBar = (props) => {
                     marginX: "30px",
                     cursor: "pointer",
                     borderBottom:
-                      currentPath === item.path ? "2px solid red" : "none",
+                      currentPath === item.path
+                        ? "2px solid var(--sky_blue)"
+                        : "none",
                     display: "inline-block",
                   }}
                 >
@@ -82,15 +99,15 @@ const DrawerAppBar = (props) => {
                 </Typography>
               </Link>
             ))}
-          </Box>
+          </Grid>
         </Grid>
       </Grid>
     </Box>
   );
 };
 
-DrawerAppBar.propTypes = {
-  window: PropTypes.func,
-};
+// DrawerAppBar.propTypes = {
+//   window: PropTypes.func,
+// };
 
 export default DrawerAppBar;

@@ -364,7 +364,7 @@ const MemoryCard = ({ item }) => {
               </Typography>
             </Box>
             <div
-              className="left-position-style"
+              className="left-postion-style"
               onClick={handleExpandClick}
             ></div>
 
