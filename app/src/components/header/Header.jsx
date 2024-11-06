@@ -7,7 +7,7 @@ import QuarterCircles from "../geometricShapes/QuarterCircles";
 import DrawerAppBar from "./Desktop";
 import MobileDrawer from "./MobileDrawer";
 import { usePathname } from "next/navigation";
-import { Backdrop, Fade, Modal } from "@mui/material";
+import { Backdrop, Fade, Modal, Typography } from "@mui/material";
 
 // Define the action function here
 // const handleButtonClick = () => {
@@ -35,7 +35,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 200,
+  width: 300,
   bgcolor: "var(--sky_blue_3)",
   border: "2px solid #ffff",
   borderRadius: "10px",
@@ -134,6 +134,9 @@ const Header = () => {
             >
               <Fade in={open}>
                 <Box sx={style}>
+                <Typography marginBottom={"20px"} color={"white"} display={"flex"} justifyContent={"center"}>
+                  برای ارتباط با ما از طریق لینک های زیر اقدام نمایید
+                </Typography>
                   <Box
                     display={"flex"}
                     justifyContent={"center"}
@@ -158,6 +161,9 @@ const Header = () => {
                       </Box>
                     ))}
                   </Box>
+                  <Typography margintop={"20px"} color={"white"} display={"flex"} justifyContent={"center"}>
+                    ۰۹۳۶۱۳۹۷۷۹۷
+                    </Typography>
                 </Box>
               </Fade>
             </Modal>

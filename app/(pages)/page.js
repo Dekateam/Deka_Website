@@ -126,7 +126,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 200,
+  width: 500,
   bgcolor: "var(--sky_blue_3)",
   border: "2px solid #ffff",
   borderRadius: "10px",
@@ -204,6 +204,9 @@ const Home = () => {
               >
                 <Fade in={open}>
                   <Box sx={style}>
+                    <Typography marginBottom={"20px"} color={"white"} display={"flex"} justifyContent={"center"}>
+                       برای ارتباط با ما از طریق لینک های زیر اقدام نمایید
+                    </Typography>
                     <Box
                       display={"flex"}
                       justifyContent={"center"}
@@ -228,6 +231,9 @@ const Home = () => {
                         </Box>
                       ))}
                     </Box>
+                    <Typography margintop={"20px"} color={"white"} display={"flex"} justifyContent={"center"}>
+                    ۰۹۳۶۱۳۹۷۷۹۷
+                    </Typography>
                   </Box>
                 </Fade>
               </Modal>

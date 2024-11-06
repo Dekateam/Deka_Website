@@ -259,7 +259,7 @@ const MemoryCard = ({ item }) => {
             ></div>
 
             {/* Full description box with transition */}
-            <Box
+            {/* <Box
               className={`full-desc-box ${isExpanded ? "expanded" : ""}`}
               onClick={handleExpandClick}
               sx={{
@@ -280,7 +280,7 @@ const MemoryCard = ({ item }) => {
               backgroundColor={"red"}
             >
               <CloseIcon sx={{ color: "#fff" }} />
-            </Box>
+            </Box> */}
             <Box
               className={`full-desc-box ${isExpanded ? "expanded" : ""}`}
               sx={{
@@ -369,7 +369,7 @@ const MemoryCard = ({ item }) => {
             ></div>
 
             {/* Full description box with transition */}
-            <Box
+            {/* <Box
               className={`full-desc-box ${isExpanded ? "expanded" : ""}`}
               onClick={handleExpandClick}
               sx={{
@@ -389,7 +389,7 @@ const MemoryCard = ({ item }) => {
               backgroundColor={"red"}
             >
               <CloseIcon sx={{ color: "#fff" }} />
-            </Box>
+            </Box> */}
             <Box
               className={`full-desc-box ${isExpanded ? "expanded" : ""}`}
               sx={{
